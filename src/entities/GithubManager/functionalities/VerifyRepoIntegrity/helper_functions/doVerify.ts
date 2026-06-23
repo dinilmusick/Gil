@@ -1,5 +1,5 @@
 import { verifyTree } from "./verifyTree.js";
-import { DATA as GitHubData, FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
+import { FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
 
 export const doVerify = async (input: any, state: any, system: any) => {
     const krng = system._ingressNetwork?.members?.get("krng")?.entity;
@@ -9,10 +9,10 @@ export const doVerify = async (input: any, state: any, system: any) => {
     try {
         let sha = input.sha;
         if (!sha) {
-            const info = await FUNCTIONS.GitHub.getRemoteRepoInfo(input.owner, input.repo, keyRes.value);
+            const info = await GitHubFuncs.getRemoteRepoInfo(input.owner, input.repo, keyRes.value);
             sha = info.default_branch || "main";
         }
-        const treeRes = await FUNCTIONS.GitHub.getRepoTree(input.owner, input.repo, sha, keyRes.value);
+        const treeRes = await GitHubFuncs.getRepoTree(input.owner, input.repo, sha, keyRes.value);
         const account = state.accounts[input.alias];
         const localRepoDir = `${account.workspace}/${input.repo}`;
         const missingFiles = await verifyTree(localRepoDir, treeRes.tree || []);

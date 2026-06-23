@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { DATA as GitOpsData, FUNCTIONS as GitOpsFuncs } from "../../../../../libraries/GitOpsConcepts/GitOpsConcepts.js";
+import { FUNCTIONS as GitOpsFuncs } from "../../../../../libraries/GitOpsConcepts/GitOpsConcepts.js";
 
 export const doClone = async (input: any, state: any, system: any) => {
     const krng = system._ingressNetwork?.members?.get("krng")?.entity;
@@ -14,7 +14,7 @@ export const doClone = async (input: any, state: any, system: any) => {
         exists = files.length > 0;
     } catch (e) {}
     if (!exists) {
-        await FUNCTIONS.GitOps.cloneRepository(input.url, dest, keyRes.value);
+        await GitOpsFuncs.cloneRepository(input.url, dest, keyRes.value);
     }
     const verifyRes = await system.call("VerifyRepoIntegrity", {
         alias: input.alias,

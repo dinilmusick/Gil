@@ -1,6 +1,4 @@
-import { DATA as GitHubData, FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
-import { DATA as GitOpsData, FUNCTIONS as GitOpsFuncs } from "../../../../../libraries/GitOpsConcepts/GitOpsConcepts.js";
-import { z } from "zod";
+import { doClone } from "../helper_functions/doClone.js";
 import { z } from "zod";
 export const schema = {
     input: z.object({
@@ -17,6 +15,5 @@ export const schema = {
 };
 
 export const main = async (input: any, { state, entity: system }: any) => {
-    // @ts-ignore
     return await doClone(input, state, system);
 };

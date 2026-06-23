@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { DATA as GitHubData, FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
+import { FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
 
 export const doRepair = async (input: any, state: any, system: any) => {
     const krng = system._ingressNetwork?.members?.get("krng")?.entity;
@@ -10,7 +10,7 @@ export const doRepair = async (input: any, state: any, system: any) => {
     const account = state.accounts[input.alias];
     const localRepoDir = `${account.workspace}/${input.repo}`;
     const repairFile = async (file: any) => {
-        const data = await FUNCTIONS.GitHub.downloadFileContent(input.owner, input.repo, file.path, keyRes.value);
+        const data = await GitHubFuncs.downloadFileContent(input.owner, input.repo, file.path, keyRes.value);
         const fullPath = path.join(localRepoDir, file.path);
         await fs.mkdir(path.dirname(fullPath), { recursive: true });
         await fs.writeFile(fullPath, data);

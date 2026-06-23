@@ -1,4 +1,4 @@
-import { DATA as RateLimiterData, FUNCTIONS as RateLimiterFuncs } from "../../../../../libraries/RateLimiterConcepts/RateLimiterConcepts.js";
+import { FUNCTIONS as RateLimiterFuncs } from "../../../../../libraries/RateLimiterConcepts/RateLimiterConcepts.js";
 
 const runWatchLoop = async (jobKey: string, system: any, state: any) => {
     const job = state.watchJobs?.[jobKey];
@@ -6,7 +6,7 @@ const runWatchLoop = async (jobKey: string, system: any, state: any) => {
     try {
         await system.call("CloneRepo", { alias: job.alias, owner: job.owner, repo: job.repo, url: job.url });
         const rateLimitKey = `throttle:${jobKey}`;
-        const allowed = FUNCTIONS.RateLimiter.throttle(rateLimitKey, job.intervalMs || 30000, state);
+        const allowed = RateLimiterFuncs.throttle(rateLimitKey, job.intervalMs || 30000, state);
         if (allowed) {
             setTimeout(() => runWatchLoop(jobKey, system, state), job.intervalMs || 30000);
         }

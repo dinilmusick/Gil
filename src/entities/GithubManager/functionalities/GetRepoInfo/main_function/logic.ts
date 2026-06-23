@@ -1,5 +1,4 @@
-import { DATA as GitHubData, FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
-import { z } from "zod";
+import { FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
 import { z } from "zod";
 export const schema = {
     input: z.object({
@@ -22,7 +21,7 @@ export const main = async (input: any, { state, entity: system }: any) => {
         return { status: "error", error: "Token not found in keyring" };
     }
     try {
-        const info = await FUNCTIONS.GitHub.getRemoteRepoInfo(input.owner, input.repo, keyRes.value);
+        const info = await GitHubFuncs.getRemoteRepoInfo(input.owner, input.repo, keyRes.value);
         return { status: "success", info };
     } catch (e: any) {
         return { status: "error", error: e.message };

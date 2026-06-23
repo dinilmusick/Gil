@@ -1,5 +1,4 @@
-import { DATA as GitHubData, FUNCTIONS as GitHubFuncs } from "../../../../../libraries/GitHubConcepts/GitHubConcepts.js";
-import { z } from "zod";
+import { doRepair } from "../helper_functions/doRepair.js";
 import { z } from "zod";
 export const schema = {
     input: z.object({
@@ -16,6 +15,5 @@ export const schema = {
 };
 
 export const main = async (input: any, { state, entity: system }: any) => {
-    // @ts-ignore
     return await doRepair(input, state, system);
 };

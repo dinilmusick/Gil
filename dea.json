@@ -1,0 +1,222 @@
+{
+  "currentStage": "Implementation Stage",
+  "lastDoneMove": "Transitioned to stage: Implementation Stage",
+  "boneAssets": [],
+  "implementedAssets": [
+    "GithubManager",
+    "AddAccount",
+    "RemoveAccount",
+    "ListAccounts",
+    "GetAccountInfo",
+    "ListRepos",
+    "GetRepoInfo",
+    "CloneRepo",
+    "VerifyRepoIntegrity",
+    "RepairRepo",
+    "StartWatchedClone",
+    "callApi",
+    "getRepoTree",
+    "downloadFileContent",
+    "getAccountUser",
+    "listAccountRepos",
+    "createRemoteRepo",
+    "deleteRemoteRepo",
+    "forkRemoteRepo",
+    "createIssue",
+    "listIssues",
+    "createPullRequest",
+    "listPullRequests",
+    "getRemoteRepoInfo",
+    "throttle",
+    "runGitCommand",
+    "cloneRepository",
+    "RateLimiterConcepts.ts",
+    "RateLimiterConcepts.js"
+  ],
+  "installedLibraries": [],
+  "untestedEndpoints": [],
+  "projectTested": true,
+  "gitTaskCount": 0,
+  "structureTree": {
+    "id": "Gil",
+    "type": "system",
+    "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src",
+    "checked": {
+      "scaffold": true,
+      "implementation": true,
+      "tested": {
+        "unit": false,
+        "integration": false
+      }
+    },
+    "buggedEntries": [],
+    "children": [
+      {
+        "id": "GithubManager",
+        "type": "entity",
+        "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager",
+        "checked": {
+          "scaffold": true,
+          "implementation": true,
+          "tested": {
+            "unit": false,
+            "integration": false
+          }
+        },
+        "buggedEntries": [],
+        "children": [
+          {
+            "id": "AddAccount",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/AddAccount",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "RemoveAccount",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/RemoveAccount",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "ListAccounts",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/ListAccounts",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "GetAccountInfo",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/GetAccountInfo",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "ListRepos",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/ListRepos",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "GetRepoInfo",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/GetRepoInfo",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "CloneRepo",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/CloneRepo",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "VerifyRepoIntegrity",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/VerifyRepoIntegrity",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "RepairRepo",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/RepairRepo",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          },
+          {
+            "id": "StartWatchedClone",
+            "type": "functionality",
+            "path": "/Users/dinil/Desktop/Projects/Javascript/Gil/src/entities/GithubManager/functionalities/StartWatchedClone",
+            "checked": {
+              "scaffold": true,
+              "implementation": true,
+              "tested": {
+                "unit": false,
+                "integration": false
+              }
+            },
+            "buggedEntries": [],
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
